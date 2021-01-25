@@ -25,6 +25,50 @@ if( function_exists('acf_add_local_field_group') ):
                 'rows' => 12,
                 'new_lines' => '',
             ),
+            array(
+                'key' => 'field_600e9048cebf2',
+                'label' => '<span class="mdi mdi-help"></span> Help',
+                'name' => '',
+                'type' => 'accordion',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'open' => 0,
+                'multi_expand' => 0,
+                'endpoint' => 0,
+            ),
+            array(
+                'key' => 'field_600e906ccebf3',
+                'label' => '',
+                'name' => '',
+                'type' => 'message',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '<h1>List of special functionality in rawcode blocks.</h1>
+    
+    <h2>[[shortcodes]]</h2>
+    <p>All shortcodes will be run and created as normal.</p>
+    
+    
+    <h2>{{moustaches}}</h2>
+    <p>Moustaches are custom functionality to implement into the code. Below is a list of those funcitons.</p>
+    
+    <h3><code>{{random_image_url:4,75,23,75}}</code></h3>
+    <p>You can generate a random image URL by using this moustache and supplying the image IDs.</p>',
+                'new_lines' => 'wpautop',
+                'esc_html' => 0,
+            ),
         ),
         'location' => array(
             array(
