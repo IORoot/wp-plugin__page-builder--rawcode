@@ -11,7 +11,7 @@ class initialise
         // ┌─────────────────────────────────────────────────────────────────────────┐
         // │                            Include Field Groups    	        	     │
         // └─────────────────────────────────────────────────────────────────────────┘
-        require __DIR__.'/acf/acf_field_groups.php';
+        // require __DIR__.'/acf/acf_field_groups.php';
 
         // ┌─────────────────────────────────────────────────────────────────────────┐
         // │                Register filter for page builder to use.    		     │
@@ -24,6 +24,7 @@ class initialise
         // └─────────────────────────────────────────────────────────────────────────┘
         new moustaches\shortcodes;
         new moustaches\random_image_url;
+        new moustaches\php;
     }
 
 }

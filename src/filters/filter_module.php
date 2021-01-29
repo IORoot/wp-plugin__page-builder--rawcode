@@ -13,6 +13,7 @@ class filter_module
 
     public function filter_code($organism)
     {
+        if (empty($organism['enabled'])){ return; }
 
         $code = $organism['raw_code'];
 
