@@ -7,6 +7,25 @@ if( function_exists('acf_add_local_field_group') ):
         'title' => 'Page Builder - Module - Raw Code',
         'fields' => array(
             array(
+                'key' => 'field_6010089610206',
+                'label' => 'Enabled',
+                'name' => 'enabled',
+                'type' => 'true_false',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '',
+                'default_value' => 1,
+                'ui' => 1,
+                'ui_on_text' => '',
+                'ui_off_text' => '',
+            ),
+            array(
                 'key' => 'field_5ffc51b1bf53e',
                 'label' => 'Raw Code',
                 'name' => 'raw_code',
@@ -65,7 +84,14 @@ if( function_exists('acf_add_local_field_group') ):
     <p>Moustaches are custom functionality to implement into the code. Below is a list of those funcitons.</p>
     
     <h3><code>{{random_image_url:4,75,23,75}}</code></h3>
-    <p>You can generate a random image URL by using this moustache and supplying the image IDs.</p>',
+    <p>You can generate a random image URL by using this moustache and supplying the image IDs.</p>
+    
+    <h2>PHP CODE</h2>
+    <p>PHP Code can also be passed through \'eval()\'. Remember to add the open/close php tags too! Since the code will run the code there and then, do not use <code>echo</code>, rather use <code>return</code> to place the result back in the place you called it.</p>
+    <p>Note, that to use the PHP code in a taxonomy page, you can do do something like this:</p>
+    <p>
+    <code>$term = get_queried_object(); return $term->name;</code>
+    </p>',
                 'new_lines' => 'wpautop',
                 'esc_html' => 0,
             ),
