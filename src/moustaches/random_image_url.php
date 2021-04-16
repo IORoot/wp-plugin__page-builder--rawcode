@@ -39,7 +39,7 @@ class random_image_url
 
         $random_key = array_rand($ids);
 
-        $image_src = wp_get_attachment_image_src($ids[$random_key]);
+        $image_src = wp_get_attachment_image_src($ids[$random_key], 'full');
 
         if (!is_array($image_src)){ return $code; }
 
