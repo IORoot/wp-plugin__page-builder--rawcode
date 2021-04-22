@@ -27,10 +27,14 @@ class shortcodes
     {
         preg_match_all('/(\[.*\])/', $code, $matches);
 
+        if(empty($matches[0])){ return $code; }
+        
         foreach ($matches[0] as $key => $match)
         {
             $words = explode(' ', $match);
             $shortcode = str_replace('[','',$words[0]);
+
+            if (!array_key_exists(1+$key,$matches[0])){ continue; }
             $closing_word = strpos($matches[0][1+$key], $shortcode);
 
             // theres a closer [/tag] for the shortcode.
